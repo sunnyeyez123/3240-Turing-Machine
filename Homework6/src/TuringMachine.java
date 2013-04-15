@@ -59,7 +59,6 @@ public class TuringMachine {
 			// 1. Scan the tape and mark the Þrst 1 which has not been marked.
 			// If no unmarked 1Õs are found go to stage 5.
 			//Otherwise move the head back to the start of the tape
-
 			for (int i = 0; i < tapeLen; i++) {
 				
 				if(tape[1][i].equals('1')){
