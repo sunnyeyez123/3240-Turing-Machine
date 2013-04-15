@@ -31,20 +31,20 @@ public class TuringMachine {
 		}
 
 	}
-	
-	public boolean isValid(){
+
+	public boolean isValid() {
 		return valid;
 	}
 
 	public void mark(int i) {
-		tape[0][i] ='X';
+		tape[0][i] = 'X';
 	}
-	
-	public boolean isMarked(int i){
-		if(tape[0][i] =='X'){
+
+	public boolean isMarked(int i) {
+		if (tape[0][i] == 'X') {
 			return true;
 		}
-		
+
 		return false;
 	}
 
@@ -58,19 +58,20 @@ public class TuringMachine {
 
 			// 1. Scan the tape and mark the Þrst 1 which has not been marked.
 			// If no unmarked 1Õs are found go to stage 5.
-			//Otherwise move the head back to the start of the tape
+			// Otherwise move the head back to the start of the tape
 			for (int i = 0; i < tapeLen; i++) {
-				
-				if(tape[1][i].equals('1')){
+
+				if (tape[1][i].equals('1')) {
 					System.out.println("found a 1");
 					found1 = true;
-					if(!isMarked(i)){
+					if (!isMarked(i)) {
 						mark(i);
 						break;
 					}
+
 				}
 			}
-			if(!found1){
+			if (!found1) {
 				stage5 = true;
 			}
 			printTape();
@@ -96,8 +97,8 @@ public class TuringMachine {
 
 			}
 			count++;
-		}//end while
-		
+		}// end while
+
 	}
 
 	public void getResult() {
