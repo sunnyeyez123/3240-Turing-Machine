@@ -4,4 +4,7 @@
 *.jar
 *.war
 *.ear
-*/.metadata/*
+
+.DS_Store
+.metadata
+
